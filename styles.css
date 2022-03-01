@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Spartan', sans-serif;
+  background-color: hsl(222, 26%, 31%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body > div {
+  display: flex;
+  flex-direction: column;
+}
+.calculadora {
+  color: white;
+}
+.calculadora > p {
+  margin-bottom: 2vh;
+  font-size: 1.3rem;
+}
+.visor {
+  background-color: hsl(223, 37%, 15%);
+  height: 14vh;
+  border-radius: 8px;
+  display: flex;
+  margin-bottom: 2vh;
+  padding: 2vw;
+  justify-content: flex-end;
+  align-items: center;
+}
+.visor p {
+  font-size: 1.8rem;
+}
+.botoes {
+  border-radius: 10px;
+  padding: 2vw;
+  width: 35vw;
+  height: 50vh;
+  background-color: hsl(223, 31%, 20%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2vh;
+}
+button {
+  padding-top: 1vh;
+  display: flex;
+  font-size: 1.5rem;
+  color: hsl(221, 14%, 31%);
+  border-radius: 8px;
+  background-color: hsl(30, 25%, 89%);
+  font-family: 'Spartan', sans-serif;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: 1px 2px 1px 1px rgb(156, 151, 151);
+  cursor: pointer;
+}
+button:active{
+  box-shadow: none;
+}
+.btncl {
+  box-shadow: 1px 2px 1px 1px hsl(224, 28%, 35%);
+}
+.btncl:active {
+  box-shadow: none;
+}
+#reset {
+  font-size: 0.9rem;
+  grid-column: 1/ span 2;
+  color: white;
+  background-color: hsl(225, 21%, 49%);
+}
+#igual {
+  color: white;
+  font-size: 0.9rem;
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 1px 2px 1px 1px hsl(6, 70%, 34%);
+  grid-column: 3/ span 2;
+}
+#igual:active {
+  box-shadow: none;
+}
+#del {
+  font-size: 0.9rem;
+  color: white;
+  background-color: hsl(225, 21%, 49%);
+}
+
+@media (max-width: 450px) {
+  body {
+    justify-content: center;
+  }
+  .body > div {
+    height: 80vh;
+  }
+  .calculadora {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .calculadora > p {
+    margin: 4vh 0;
+    font-size: 2rem;
+  }
+  .botoes {
+    padding: 4vh;
+    width: 85vw;
+    height: 60vh;
+  }
+  .visor {
+    margin-bottom: 4vh;
+  }
+}
